@@ -171,4 +171,49 @@ if (!neighbours.includes(`Germany`)) {
 }
 
 neighbours[0] = "Flanders";
-console.log(neighbours); 
+console.log(neighbours);
+
+
+// INTRODUCTION TO OBJECTS
+//Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+const myCountry = {
+    country: "Netherlands",
+    capital: "Amsterdam",
+    Language: 'dutch',
+    population: 16,
+    neighbours: ['belgium', 'Germany', 'United Kindgom'],
+    isIsland: neighbours.length == 0 ? true : false,
+
+    describe: function () {
+        return `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries, and a capital called ${this.capital}`
+    },
+
+
+    checkIsIsland: function () {
+        this.island = this.neighbours.length === 0 ? true : false;
+    }
+
+}
+
+// DOT VS BRACKET NOTATION
+
+
+// Increase the country's population by two million using dot notation, and then decrease it by two million using brackets notation
+// console.log(myCountry.describe());
+
+// myCountry.population += 2;
+
+// console.log(myCountry.describe());
+
+
+// myCountry['population'] -= 2;
+
+myCountry.describe;
+myCountry.checkIsIsland;
+console.log(myCountry);
+
+
+// ITERATION THE FOR LOOP
+for (let vote = 1; vote <= 50; vote++) {
+    console.log(`Voter number ${vote} is voting`)
+}

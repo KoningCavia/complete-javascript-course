@@ -194,6 +194,7 @@ if (friends.includes("Eva")) {
 
 /*
 
+
 // INTRODUCTION TO OBJECTS - easy
 
 // DOT VS BRACKET NOTATION
@@ -238,8 +239,10 @@ console.log(wiggle);
 console.log(wiggle.firstName + ' has ' + wiggle.friends.length + ' friends, and his best friend is calles ' + wiggle.friends[0]);
 console.log(`${wiggle.firstName} has ${wiggle.friends.length} friends, and his best friend is called ${wiggle.friends[0]}`);
 
+
 */
 
+/*
 // OBJECT METHODS
 const wiggle = {
     firstName: 'wiggle',
@@ -255,7 +258,7 @@ const wiggle = {
         return 2037 - this.birthyear;
     },
 
-    wiggleString: function () { // remember the () after method calls ie calcAge.
+    getSummary: function () { // remember the () after method calls ie calcAge.
         return `${this.firstName} is a ${this.calcAge()} year old ${this.job} and he has ${this.hasDriversLicens ? 'a' : 'no'} driver's license.`
     }
 };
@@ -264,7 +267,38 @@ console.log(wiggle.calcAge(wiggle.birthyear));      //calling the function using
 console.log(wiggle.calcAge());
 console.log(wiggle['calcAge'](1991));   // calling the function using parantheses.
 
+console.log(wiggle['calcAge'](1991));   // calling the function using parantheses.
 // CHALLENGE
 // "wiggle is a 46-year old teacher and he has a drivers license"
 // See WiggleString function
-console.log(wiggle.wiggleString());  // remember the () after the method
+console.log(wiggle.getSummary());  // remember the () after the method
+
+*/
+
+
+/*
+// ITERATIONS THE FOR LOOP
+
+//this is a control structure (like if () statements). This is a fundamental aspect of any language which helps us to automate repetitive tasks.
+
+// console.log('lifting weights repetition 1 ')
+// console.log('lifting weights repetition 2 ')
+// console.log('lifting weights repetition 3 ')
+// console.log('lifting weights repetition 4 ')
+// console.log('lifting weights repetition 5 ')
+// console.log('lifting weights repetition 6 ')
+// console.log('lifting weights repetition 7 ')
+// console.log('lifting weights repetition 8 ')
+// console.log('lifting weights repetition 9 ')
+// console.log('lifting weights repetition 10 ')
+// this violates the dry principal very badly. So we use loopyloop
+
+//for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10000; rep++) {
+    console.log(`lifting weights repetition ${rep}`)
+}
+*/
+
+
+
+// LOOPING ARRAYS< BREAKING AD CONTINUING
