@@ -1,3 +1,4 @@
+'use strict';
 /*
 
 // CHALLENGE 1 & 2
@@ -134,3 +135,19 @@ const loser = !(John.bmi > Mark.bmi) ? John : Mark;
 console.log(winner);
 console.log(loser);
 console.log(`${winner.fullName}'s BMI (${winner.bmi}) is higher than ${loser.fullName}'s (${loser.bmi})!`)
+
+
+// JAVASCRIPT FUNDAMENTAL PART 2: CHALLENGE 4
+const calcTip2 = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+let bills2 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips2 = new Array;
+let totals2 = new Array;
+
+for (let i = 0; i < bills2.length; i++) {
+    tips2.push(calcTip2(bills2[i]))
+    totals2[i] = bills2[i] + tips[i];
+    console.log(`your bill is: ${bills2[i]}. The suggested tip is: ${tips2[i]}. which totals to: ${totals2[i]} `)
+}

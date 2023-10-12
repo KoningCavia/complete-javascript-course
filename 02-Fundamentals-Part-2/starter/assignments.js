@@ -217,3 +217,80 @@ console.log(myCountry);
 for (let vote = 1; vote <= 50; vote++) {
     console.log(`Voter number ${vote} is voting`)
 }
+
+// LOOPING ARRAYS, BREAKING, AND CONTINUING
+//1
+const populationss = [100, 1000, 1000 * 10 ** 3, 10 * 10 ** -3];
+
+//2
+let percentages2 = []
+console.log('----')
+for (i = 0; i < populationss.length; i++) {
+    percentages2.push(percentageOfWorld1(populationss[i]));
+
+}
+console.log(percentages2);
+
+//3
+for (i = 0; i < populationss.length; i++) {
+    if (percentages2[i] == percentages[i]) {
+        console.log('true')
+    } else {
+        console.log('neeeee');
+    }
+}
+
+// LOOPING BACKWARDS AND LOOPS IN LOOPS
+console.log('beginning of looping');
+
+let listOfNeighbours = [[`Canada`, `Mexico`], [`Spain`], [`Norway`, 'Sweden', `Russie`]];
+
+for (i = 0; i < listOfNeighbours.length; i++) {
+    if (listOfNeighbours[i].length == 1) {
+        console.log(`i: ${i}. j: X ${listOfNeighbours[i]}`)
+    } else {
+        let currentList = listOfNeighbours[i]
+        for (j = 0; j < currentList.length; j++) {
+            console.log(`i: ${i}. j: ${j} ${currentList[j]}`)
+        }
+    }
+}
+
+
+console.log('loop 2');
+let listOfNeighbours2 = [[`Canada`, `Mexico`], [`Spain`], [`Norway`, 'Sweden', `Russie`]];
+
+
+for (i = 0; i < listOfNeighbours2.length; i++) {
+
+    let currentList = listOfNeighbours2[i]
+
+    if (currentList.length == 1) {
+        console.log(`i: ${i}. j: X ${currentList}`)
+
+    } else {
+        for (j = 0; j < currentList.length; j++) {
+            console.log(`i: ${i}. j: ${j} ${currentList[j]}`)
+        }
+    }
+}
+
+
+// THE WHILE LOOP
+
+console.log('----')
+for (i = 0; i < populationss.length; i++) {
+    percentages2.push(percentageOfWorld1(populationss[i]));
+
+}
+console.log(percentages2);
+
+const populationsWhile = [100, 1000, 1000 * 10 ** 3, 10 * 10 ** -3];
+
+let populationsWhileCounter = 0;
+while (populationsWhileCounter < populationsWhile.length) {
+
+    let percentagesWhile = new Array;
+    percentagesWhile.push(percentageOfWorld1(populationsWhile));
+    populationsWhileCounter++
+}

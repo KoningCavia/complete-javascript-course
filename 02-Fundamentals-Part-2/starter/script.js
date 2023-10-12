@@ -299,6 +299,105 @@ for (let rep = 1; rep <= 10000; rep++) {
 }
 */
 
-
+/*
 
 // LOOPING ARRAYS< BREAKING AD CONTINUING
+const Jonas = [
+    'Jona',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+const types = [];
+
+//right herer we do ; 1 < length ;
+for (let i = 0; i < Jonas.length; i++) {
+    //reading from Jonas array
+    console.log(Jonas[i], typeof Jonas[i]);
+
+    // filling types array
+    // types[i] = typeof Jonas[i];
+
+    // also fills the array, but a little bit cleaner
+    types.push(typeof Jonas[i]);
+}
+
+console.log(types);
+
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+// continue and break
+console.log('--- ONLY STRINGS---')
+for (let i = 0; i < Jonas.length; i++) {
+    if (typeof Jonas[i] !== 'string') continue; // if type of current element is not a string, ignore this one and go to the next loop. (so its not a break, just a pass.)
+    console.log(Jonas[i], typeof Jonas[i]);
+}
+
+console.log('---BREAK WITH NUMBER---')
+for (let i = 0; i < Jonas.length; i++) {
+    if (typeof Jonas[i] == 'number') break; // if type of current element is not a string, ignore this one and go to the next loop. (so its not a break, just a pass.)
+    console.log(Jonas[i], typeof Jonas[i]);
+}
+*/
+
+// LOOPING BACKWARDS AND LOOPS IN LOOPS
+
+/*
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
+// omgekeerde loop zijn niet perse vaak nuttig, maar dit is een goede oefening om na te dneken over loops enzo.
+
+//loop in a loop:
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`---------------Startin exercise ${exercise}`)
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting weight repetetion ${rep}`)
+    }
+}
+
+*/
+
+// 49   THE WHILE LOOP
+
+for (let rep = 1; rep < 6; rep++) {
+    console.log(`Lifting weight repetetion ${rep}`)
+}
+
+// in a while loop you can only define the condition
+let rep = 1;
+while (rep <= 6) {
+    console.log(`WHILE lifting weight repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+console.log(dice);
+
+while (dice != 6) {
+    console.log(`You rolled a ${dice}`);
+    // now if you dont rol a 6 it wont reroll the six. sop you are stuck n a loop.
+    // unless we roll another die.
+    dice = Math.trunc(Math.random() * 6) + 1
+}
+
+console.log('you rolled a six')
